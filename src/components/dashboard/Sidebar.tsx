@@ -12,9 +12,17 @@ import {
   BookOpen,
   Trophy,
   FileCheck,
+  Bot,
 } from "lucide-react";
 
 const navItems = [
+  {
+    label:
+      "AI Assistant",
+    href:
+      "/assistant",
+    icon: Bot,
+  },
   {
     name: "Dashboard",
     href: "/dashboard",
@@ -34,7 +42,7 @@ const navItems = [
     name: "Certificate",
     href: "/certificate",
     icon: FileCheck,
-  },
+  },  
 ];
 
 
@@ -253,7 +261,7 @@ const handleLogout = () => {
           return (
 
             <Link
-              key={item.name}
+              key={item.href}
               href={item.href}
               className="
               flex
