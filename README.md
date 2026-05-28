@@ -1,36 +1,250 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered Cybersecurity Training Platform
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The AI-Powered Cybersecurity Training Platform is an interactive learning management system (LMS) designed to educate users about cybersecurity concepts through modules, quizzes, badges, certificates, and AI-powered assistance.
+
+The platform provides a modern and engaging cybersecurity learning experience with gamification features such as achievements, progress tracking, badges, and certification.
+
+---
+
+# Features
+
+## Authentication System
+
+* User Registration
+* Secure Login System
+* Session Persistence using Local Storage
+* Email and Password Validation
+
+---
+
+## Interactive Dashboard
+
+* Personalized User Dashboard
+* Progress Tracking
+* Module Completion Tracking
+* Earned Badge Overview
+* Certificate Access
+
+---
+
+## Cybersecurity Learning Modules
+
+The platform includes multiple cybersecurity learning modules such as:
+
+* Phishing Awareness
+* Passwords & 2FA
+* Malware & Ransomware
+* Social Engineering
+* Secure Browsing
+* Network Security
+
+Each module contains:
+
+* Learning content
+* Detailed explanations
+* Interactive quizzes
+
+---
+
+## Quiz System
+
+* Dynamic MCQ-based quizzes
+* 10 questions per module
+* Score calculation
+* Instant evaluation
+* Badge unlocking system
+
+---
+
+## Badge & Achievement System
+
+Users unlock badges after scoring 10/10 in quizzes.
+
+Features:
+
+* Achievement popup system
+* Badge tracking
+* Completed module indicators
+* Gamified learning experience
+
+---
+
+## Certificate System
+
+* Dynamic certificate generation
+* Personalized certificate with registered username
+* Certificate unlock after all badges are earned
+
+---
+
+## AI Cybersecurity Assistant
+
+Integrated AI assistant powered by Google Gemini API.
+
+Capabilities:
+
+* Answer cybersecurity questions
+* Explain phishing attacks
+* Explain malware and ransomware
+* Provide cybersecurity awareness guidance
+* Beginner-friendly cybersecurity mentoring
+
+---
+
+# Tech Stack
+
+## Frontend
+
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+
+## Backend
+
+* Next.js API Routes
+
+## AI Integration
+
+* Google Gemini API
+* @google/generative-ai SDK
+
+## UI & Icons
+
+* Lucide React Icons
+
+## State Management
+
+* React Hooks
+* Local Storage
+
+---
+
+# AI-Assisted Development Workflow
+
+This project was developed using AI-assisted development practices.
+
+AI tools were utilized for:
+
+* UI implementation guidance
+* Debugging assistance
+* Component architecture refinement
+* Dynamic routing setup
+* React and Next.js troubleshooting
+* Feature ideation
+* Code optimization
+* Development workflow acceleration
+
+The project followed an iterative AI-assisted engineering workflow where features were progressively designed, implemented, tested, and refined.
+
+---
+
+# Project Structure
+
+```bash
+src/
+│
+├── app/
+│   ├── (main)/
+│   │   ├── dashboard/
+│   │   ├── modules/
+│   │   ├── quiz/
+│   │   ├── badges/
+│   │   ├── certificate/
+│   │   └── assistant/
+│   │
+│   └── api/
+│       └── chat/
+│
+├── components/
+│   └── dashboard/
+│
+├── data/
+│   ├── moduleContent.ts
+│   └── quizData.ts
+│
+└── lib/
+```
+
+---
+
+# Setup Instructions
+
+## Clone Repository
+
+```bash
+git clone https://github.com/HrudayDoke/Cyber-Security-Training.git
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Create Environment File
+
+Create:
+
+```bash
+.env.local
+```
+
+Add:
+
+```env
+NEXT_PUBLIC_GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+---
+
+## Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Future Improvements
 
-To learn more about Next.js, take a look at the following resources:
+Potential future enhancements:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Real database integration
+* Admin dashboard
+* PDF certificate download
+* AI-generated quizzes
+* Threat simulation exercises
+* User analytics dashboard
+* Leaderboard system
+* Email verification system
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project can be deployed using:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Vercel
+* Netlify
+
+---
+
+# Author
+
+Hrudaynath Doke
+
+GitHub:
+https://github.com/HrudayDoke
