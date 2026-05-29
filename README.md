@@ -20,7 +20,7 @@ https://github.com/HrudayDoke/Cyber-Security-Training
 
 Deployment Link:
 
-[Add Vercel Deployment URL Here]
+https://cyber-security-training-pqlw.vercel.app
 
 ---
 
