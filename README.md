@@ -1,210 +1,266 @@
-# AI-Powered Cybersecurity Training Platform
+# AI Cybersecurity Training Platform
 
 ## Overview
 
-The AI-Powered Cybersecurity Training Platform is an interactive learning management system (LMS) designed to educate users about cybersecurity concepts through modules, quizzes, badges, certificates, and AI-powered assistance.
+AI Cybersecurity Training Platform is a modern cybersecurity learning application that combines interactive training modules, quizzes, gamification, and AI-powered cybersecurity assistance.
 
-The platform provides a modern and engaging cybersecurity learning experience with gamification features such as achievements, progress tracking, badges, and certification.
-
----
-
-# Features
-
-## Authentication System
-
-* User Registration
-* Secure Login System
-* Session Persistence using Local Storage
-* Email and Password Validation
+The platform helps users learn cybersecurity concepts through structured learning paths while leveraging Generative AI to provide contextual guidance and threat analysis.
 
 ---
 
-## Interactive Dashboard
+## Source Code Repository
 
-* Personalized User Dashboard
-* Progress Tracking
-* Module Completion Tracking
-* Earned Badge Overview
-* Certificate Access
+GitHub Repository:
+
+https://github.com/HrudayDoke/Cyber-Security-Training
 
 ---
 
-## Cybersecurity Learning Modules
+## Deployment
 
-The platform includes multiple cybersecurity learning modules such as:
+Deployment Link:
 
-* Phishing Awareness
-* Passwords & 2FA
-* Malware & Ransomware
-* Social Engineering
-* Secure Browsing
-* Network Security
-
-Each module contains:
-
-* Learning content
-* Detailed explanations
-* Interactive quizzes
+[Add Vercel Deployment URL Here]
 
 ---
 
-## Quiz System
+## Tech Stack
 
-* Dynamic MCQ-based quizzes
-* 10 questions per module
-* Score calculation
-* Instant evaluation
-* Badge unlocking system
-
----
-
-## Badge & Achievement System
-
-Users unlock badges after scoring 10/10 in quizzes.
-
-Features:
-
-* Achievement popup system
-* Badge tracking
-* Completed module indicators
-* Gamified learning experience
-
----
-
-## Certificate System
-
-* Dynamic certificate generation
-* Personalized certificate with registered username
-* Certificate unlock after all badges are earned
-
----
-
-## AI Cybersecurity Assistant
-
-Integrated AI assistant powered by Google Gemini API.
-
-Capabilities:
-
-* Answer cybersecurity questions
-* Explain phishing attacks
-* Explain malware and ransomware
-* Provide cybersecurity awareness guidance
-* Beginner-friendly cybersecurity mentoring
-
----
-
-# Tech Stack
-
-## Frontend
+### Frontend
 
 * Next.js 16
 * React 19
 * TypeScript
 * Tailwind CSS
 
-## Backend
-
-* Next.js API Routes
-
-## AI Integration
+### AI & Backend
 
 * Google Gemini API
 * @google/generative-ai SDK
+* REST API Architecture
 
-## UI & Icons
+### Deployment & DevOps
 
-* Lucide React Icons
-
-## State Management
-
-* React Hooks
-* Local Storage
+* GitHub
+* Vercel
 
 ---
 
-# AI-Assisted Development Workflow
+## Features
 
-This project was developed using AI-assisted development practices.
+### Learning Management System
 
-AI tools were utilized for:
+* Cybersecurity learning modules
+* Interactive quizzes
+* Progress tracking
+* Achievement badges
+* Certificate generation
 
-* UI implementation guidance
-* Debugging assistance
-* Component architecture refinement
-* Dynamic routing setup
-* React and Next.js troubleshooting
-* Feature ideation
-* Code optimization
-* Development workflow acceleration
+### AI Features
 
-The project followed an iterative AI-assisted engineering workflow where features were progressively designed, implemented, tested, and refined.
+#### CyberAI Assistant
+
+A Retrieval-Augmented Generation (RAG) inspired cybersecurity assistant that provides contextual cybersecurity guidance using the platform knowledge base.
+
+#### AI Phishing Analyzer
+
+Analyzes suspicious emails and messages and provides:
+
+* Threat Level
+* Attack Indicators
+* Explanation
+* Recommendations
+
+#### AI Quiz Generator
+
+Generates module-specific cybersecurity quizzes using Gemini AI.
+
+Fallback Strategy:
+When AI services are unavailable, the application automatically loads predefined quizzes to maintain uninterrupted user experience.
 
 ---
 
-# Project Structure
+## Architecture
 
-```bash
-src/
-│
-├── app/
-│   ├── (main)/
-│   │   ├── dashboard/
-│   │   ├── modules/
-│   │   ├── quiz/
-│   │   ├── badges/
-│   │   ├── certificate/
-│   │   └── assistant/
-│   │
-│   └── api/
-│       └── chat/
-│
-├── components/
-│   └── dashboard/
-│
-├── data/
-│   ├── moduleContent.ts
-│   └── quizData.ts
-│
-└── lib/
+### Learning Flow
+
+```text
+User
+ ↓
+Cybersecurity Module
+ ↓
+Learning Content
+ ↓
+Quiz Assessment
+ ↓
+Badges & Certificate
+```
+
+### CyberAI Flow
+
+```text
+User Question
+ ↓
+Knowledge Base Retrieval
+ ↓
+Context Construction
+ ↓
+Gemini API
+ ↓
+Cybersecurity Response
+```
+
+### Phishing Analyzer Flow
+
+```text
+Email / Message
+ ↓
+Prompt Engineering Layer
+ ↓
+Gemini Analysis
+ ↓
+Threat Assessment
 ```
 
 ---
 
-# Setup Instructions
+## AI-Assisted Development Process
 
-## Clone Repository
+AI-assisted development was used throughout the project lifecycle.
+
+### Areas Where AI Assistance Was Used
+
+* UI component generation
+* Application architecture planning
+* TypeScript code generation
+* API integration workflows
+* Debugging and troubleshooting
+* Prompt engineering
+* Cybersecurity content generation
+* RAG workflow design
+
+### Human Contributions
+
+* Architecture decisions
+* Feature implementation
+* Application integration
+* Testing and debugging
+* UI customization
+* Deployment preparation
+
+---
+
+## Key Implementation Decisions
+
+### 1. Next.js App Router
+
+Selected for:
+
+* Modern React architecture
+* Scalability
+* Server and Client Component support
+* API route integration
+
+### 2. Modular Learning Structure
+
+Each cybersecurity topic is designed as an independent module for easier maintenance and future expansion.
+
+### 3. AI-Powered Learning
+
+Implemented:
+
+* CyberAI Assistant
+* AI Phishing Detection
+* AI Quiz Generation
+
+### 4. Fallback Mechanism
+
+Because external AI services may become unavailable due to quota limits or service interruptions, fallback content ensures continuous usability.
+
+### 5. Gamification
+
+Added:
+
+* Badges
+* Progress tracking
+* Certificates
+
+to improve learner engagement.
+
+---
+
+## Prompt Engineering Examples
+
+### CyberAI Assistant
+
+```text
+You are a cybersecurity expert.
+
+Answer the question using the provided cybersecurity knowledge base.
+
+Provide:
+- Explanation
+- Real-world example
+- Prevention tips
+```
+
+### Phishing Analyzer
+
+```text
+Analyze the following email or message.
+
+Return:
+- Threat Level
+- Indicators
+- Explanation
+- Recommendation
+```
+
+### Quiz Generator
+
+```text
+Generate 10 cybersecurity multiple-choice questions.
+
+Return only valid JSON.
+
+Each question must contain:
+- Question
+- Four options
+- Correct answer
+```
+
+---
+
+## Setup Instructions
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/HrudayDoke/Cyber-Security-Training.git
+cd Cyber-Security-Training
 ```
 
----
-
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
----
-
-## Create Environment File
+### Configure Environment Variables
 
 Create:
 
-```bash
+```env
 .env.local
 ```
 
 Add:
 
 ```env
-NEXT_PUBLIC_GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+NEXT_PUBLIC_GEMINI_API_KEY=YOUR_API_KEY
 ```
 
----
-
-## Run Development Server
+### Run Application
 
 ```bash
 npm run dev
@@ -212,39 +268,28 @@ npm run dev
 
 Open:
 
-```bash
+```text
 http://localhost:3000
 ```
 
 ---
 
-# Future Improvements
+## Future Enhancements
 
-Potential future enhancements:
-
-* Real database integration
-* Admin dashboard
-* PDF certificate download
-* AI-generated quizzes
-* Threat simulation exercises
-* User analytics dashboard
-* Leaderboard system
-* Email verification system
+* Full vector-database RAG implementation
+* Semantic search over cybersecurity content
+* Personalized learning recommendations
+* Real-time threat intelligence integration
+* Advanced phishing detection models
+* Adaptive AI-generated learning paths
 
 ---
 
-# Deployment
-
-The project can be deployed using:
-
-* Vercel
-* Netlify
-
----
-
-# Author
+## Author
 
 Hrudaynath Doke
+
+AI Engineer Candidate
 
 GitHub:
 https://github.com/HrudayDoke
