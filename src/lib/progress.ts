@@ -5,7 +5,6 @@ export function getModuleProgress(
   if (
     typeof window === "undefined"
   ) {
-
     return 0;
   }
 
@@ -17,4 +16,21 @@ export function getModuleProgress(
   return progress
     ? Number(progress)
     : 0;
+}
+
+export function saveModuleProgress(
+  slug: string,
+  progress: number
+) {
+
+  if (
+    typeof window === "undefined"
+  ) {
+    return;
+  }
+
+  localStorage.setItem(
+    `${slug}-progress`,
+    progress.toString()
+  );
 }
