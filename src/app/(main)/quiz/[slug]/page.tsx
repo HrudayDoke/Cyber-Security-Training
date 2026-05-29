@@ -15,8 +15,50 @@ export default function QuizPage() {
   const slug =
     params.slug as string;
 
-  const questions =
-    quizData[slug];
+  const [questions,
+setQuestions] =
+  useState<any[]>([]);
+
+useEffect(() => {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const aiMode =
+    params.get("ai");
+
+  const aiQuiz =
+    localStorage.getItem(
+      "aiQuiz"
+    );
+
+  if (aiMode && aiQuiz) {
+
+    try {
+
+      setQuestions(
+        JSON.parse(aiQuiz)
+      );
+
+    } catch {
+
+      setQuestions(
+        quizData[slug]
+      );
+    }
+
+  } else {
+
+    setQuestions(
+      quizData[slug]
+    );
+  }
+
+}, [slug]);
+
+  
 
   const [currentQuestion,
   setCurrentQuestion] =
@@ -117,6 +159,10 @@ if (score + 1 === 10) {
 
 useEffect(() => {
 
+  if (
+    questions.length === 0
+  ) return;
+
   const shuffled =
     [
       ...questions[
@@ -131,7 +177,20 @@ useEffect(() => {
     shuffled
   );
 
-}, [currentQuestion]);
+}, [
+  currentQuestion,
+  questions
+]);
+
+if (
+  questions.length === 0
+) {
+  return (
+    <div className="p-10 text-white">
+      Loading Quiz...
+    </div>
+  );
+}
 
 
   if (!questions) {

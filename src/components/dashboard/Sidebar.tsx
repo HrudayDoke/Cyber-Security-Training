@@ -13,6 +13,7 @@ import {
   Trophy,
   FileCheck,
   Bot,
+  ShieldAlert,
 } from "lucide-react";
 
 const navItems = [
@@ -43,6 +44,11 @@ const navItems = [
     href: "/certificate",
     icon: FileCheck,
   },  
+  {
+    label: "Phishing Analyzer",
+    href: "/phishing-analyzer",
+    icon: ShieldAlert,
+  },
 ];
 
 

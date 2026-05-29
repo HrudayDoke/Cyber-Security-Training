@@ -1,3 +1,5 @@
+import AIQuizButton
+from "@/components/AIQuizButton";
 import Link from "next/link";
 
 import { moduleContent }
@@ -109,7 +111,10 @@ export default async function ModulePage({
             </button>
 
           </Link>
-
+          <AIQuizButton
+            topic={module.title}
+            slug={slug}
+          />
         </div>
 
       </div>
