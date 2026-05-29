@@ -33,14 +33,11 @@ export default function PhishingAnalyzerPage() {
           AI Phishing Analyzer
         </h1>
 
-        <p className="mt-4 text-slate-400">
-          Paste suspicious emails or messages and let AI analyze them.
-        </p>
 
         <textarea
           value={emailText}
           onChange={(e) => setEmailText(e.target.value)}
-          placeholder="Paste suspicious email here..."
+          placeholder="Paste suspicious emails or messages and let AI analyze them...."
           className="w-full h-60 mt-8 bg-slate-900 rounded-2xl p-5 border border-cyan-500/20"
         />
 

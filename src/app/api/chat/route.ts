@@ -1,4 +1,5 @@
-
+import { knowledgeBase }
+from "@/data/knowledgeBase";
 import {
   GoogleGenerativeAI,
 } from "@google/generative-ai";
@@ -23,10 +24,64 @@ export async function POST(
         model: "gemini-2.5-flash",
       });
 
-    const result =
-      await model.generateContent(
-        body.message
-      );
+    const message =
+  body.message.toLowerCase();
+
+let context = "";
+
+if (
+  message.includes("phishing")
+) {
+  context =
+    knowledgeBase.phishing;
+}
+else if (
+  message.includes("password")
+) {
+  context =
+    knowledgeBase.password;
+}
+else if (
+  message.includes("malware")
+) {
+  context =
+    knowledgeBase.malware;
+}
+else if (
+  message.includes("social")
+) {
+  context =
+    knowledgeBase.socialEngineering;
+}
+else if (
+  message.includes("network")
+) {
+  context =
+    knowledgeBase.networkSecurity;
+}
+
+const prompt = `
+You are a cybersecurity expert.
+
+Answer the question using
+the provided knowledge base.
+
+Knowledge Base:
+${context}
+
+Question:
+${body.message}
+
+Provide:
+- Explanation
+- Real-world example
+- Prevention tips
+`;
+
+const result =
+  await model.generateContent(
+    prompt
+  );
 
     const response =
       result.response.text();

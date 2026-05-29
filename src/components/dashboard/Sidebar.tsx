@@ -18,6 +18,7 @@ import {
 
 const navItems = [
   {
+    name: "CyberAI",
     label:
       "AI Assistant",
     href:
@@ -45,6 +46,7 @@ const navItems = [
     icon: FileCheck,
   },  
   {
+    name: "Phishing Analyzer",
     label: "Phishing Analyzer",
     href: "/phishing-analyzer",
     icon: ShieldAlert,
@@ -141,6 +143,10 @@ const handleLogout = () => {
       top-0
       left-0
       h-screen
+      overflow-y-auto
+      [scrollbar-width:none]
+      [-ms-overflow-style:none]
+      style={{ scrollbarWidth: "none", }}
       bg-[#0B1727]/95
       backdrop-blur-xl
       border-r

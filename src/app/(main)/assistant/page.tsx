@@ -79,7 +79,6 @@ AssistantPage() {
         mx-auto
         "
       >
-
         <h1
           className="
           text-6xl
@@ -90,15 +89,7 @@ AssistantPage() {
           AI Cybersecurity Assistant
         </h1>
 
-        <p
-          className="
-          text-slate-400
-          mt-4
-          text-xl
-          "
-        >
-          Ask AI anything about cybersecurity.
-        </p>
+      
 
         <textarea
           value={message}
@@ -110,10 +101,7 @@ AssistantPage() {
           }
 
           placeholder="
-Ask about phishing,
-malware,
-ransomware,
-secure coding...
+Answers are generated using the platform's cybersecurity knowledge base...
           "
 
           className="

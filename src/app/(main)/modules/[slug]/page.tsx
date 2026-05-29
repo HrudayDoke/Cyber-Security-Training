@@ -13,6 +13,7 @@ export default async function ModulePage({
   }>;
 }) {
 
+  
   const { slug } =
     await params;
 
@@ -115,6 +116,7 @@ export default async function ModulePage({
             topic={module.title}
             slug={slug}
           />
+          
         </div>
 
       </div>
